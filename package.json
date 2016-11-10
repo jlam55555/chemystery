@@ -4,13 +4,17 @@
   "description": "Help desk for Honors Chemistry students",
   "author": "Jonathan Lam <jlam55555@gmail.com",
   "scripts": {
-    "start": "node app.js"
+    "start": "node index.js"
   },
-  "main": "app.js",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://git.heroku.com/chemystery.git"
   },
-  "dependencies": {},
+  "dependencies": {
+    "socket.io": "*",
+    "express": "4.10.2",
+    "pg": "4.x"
+  },
   "license": "MIT"
 }
