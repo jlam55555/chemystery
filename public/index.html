@@ -3,7 +3,10 @@
   <head>
     <title>Mastering the Chemystery</title>
     <script src="/socket.io/socket.io.js"></script>
-    <script>io.connect()</script>
+    <script>
+      var socket = io.connect();
+      socket.emit("username", prompt("Enter your username here", "default"));
+    </script>
   </head>
   <body>
     <h1>Mastering the Chemystery</h1>

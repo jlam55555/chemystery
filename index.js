@@ -13,7 +13,15 @@ http.listen(process.env.PORT || 6000, function() {
 
 // socket.io stuff
 io.on("connection", function(socket) {
-  console.log("a user connected");
+  socket.on("username", function(username) {
+    console.log(username + " connected");
+    pg.connect(process.env.DATABASE_URL, function(err, client, done) {
+      client.query("insert into test_table (username) values ('" + username + "');", function(err, result) {
+        done();
+        if(err) console.error(err);
+      });
+    });
+  });
   socket.on("disconnect", function(socket) {
     console.log("a user disconnected");
   });
