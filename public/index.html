@@ -1,14 +1,18 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html> <html>
   <head>
     <title>Mastering the Chemystery</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/jscookie.js"></script>
     <script src="/socket.io/socket.io.js"></script>
-    <script>
-      var socket = io.connect();
-      socket.emit("username", prompt("Enter your username here", "default"));
-    </script>
+    <script src="/script.js"></script>
   </head>
   <body>
     <h1>Mastering the Chemystery</h1>
+    <div>
+      <h2>Sign In</h2>
+      <input type="text" id="username" placeholder="Username">
+      <input type="password" id="password" placeholder="Password">
+      <input type="button" id="signin" value="Sign In">
+    </div>
   </body>
 </html>

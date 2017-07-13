@@ -11,6 +11,9 @@
     "type": "git",
     "url": "https://git.heroku.com/chemystery.git"
   },
+  "engines": {
+    "node": "4.8.4"
+  },
   "dependencies": {
     "socket.io": "*",
     "pug": "*",
